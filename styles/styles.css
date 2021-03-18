@@ -54,6 +54,10 @@ img {
   padding: 8px 16px;
 }
 
+.navigation-menu > li > a {
+  color: #000;
+}
+
 .wrapper {
   margin: 0 auto;
   /*中央に配置する指定*/
