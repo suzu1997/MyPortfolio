@@ -1,0 +1,108 @@
+@charset "utf-8";
+$cBackground: rgba(250, 235, 215, 0.7);
+$cTitle: #3d3d3d;
+
+// 共通
+html {
+  font-size: 100%;
+}
+
+body {
+  /* 書体の指定 */
+  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
+    'ヒラギノ角ゴ Pro W3', sans-serif;
+  line-height: 1.7; /*行の高さ(行間)の指定*/
+}
+
+a {
+  text-decoration: none; /*リンク部分の下線をなくす*/
+}
+
+img {
+  max-width: 100%; /*画像が親要素よりも大きくなることを防ぐ*/
+  height: auto; /*アスペクト比を維持したまま画像サイズを変更*/
+}
+
+.title {
+  color: $cTitle;
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+
+// ヘッダー
+.header {
+  background-color: $cBackground;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.navigation-menu {
+  display: flex;
+
+  & > li {
+    list-style: none;
+    padding: 8px 16px;
+  }
+}
+// メイン
+.wrapper {
+  margin: 0 auto; /*中央に配置する指定*/
+  // padding: 0 4%;      /*スマートフォン向けの余白の設定*/
+  max-width: 1110px;
+}
+
+//  Topの部分
+.top {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/malta.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  & h1 {
+    color: $cTitle;
+    background-color: $cBackground;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//  profili部分
+.profile {
+  height: 100vh;
+}
+.profile-image {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px dotted $cTitle;
+  
+}
+// works部分
+.works {
+  height: 100vh;
+}
+
+// contact部分
+.contact {
+  height: 100vh;
+}
+
+// フッター
+footer {
+  background-color: $cBackground;
+  height: 30px;
+
+  & .copy-right {
+    display: block;
+    text-align: center;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,111 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+body {
+  /* 書体の指定 */
+  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', sans-serif;
+  line-height: 1.7;
+  /*行の高さ(行間)の指定*/
+}
+
+a {
+  text-decoration: none;
+  /*リンク部分の下線をなくす*/
+}
+
+img {
+  max-width: 100%;
+  /*画像が親要素よりも大きくなることを防ぐ*/
+  height: auto;
+  /*アスペクト比を維持したまま画像サイズを変更*/
+}
+
+.title {
+  color: #3d3d3d;
+  display: block;
+  text-align: center;
+  font-size: 32px;
+}
+
+.header {
+  background-color: rgba(250, 235, 215, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.navigation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation-menu > li {
+  list-style: none;
+  padding: 8px 16px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  /*中央に配置する指定*/
+  max-width: 1110px;
+}
+
+.top {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/malta.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.top h1 {
+  color: #3d3d3d;
+  background-color: rgba(250, 235, 215, 0.7);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.profile {
+  height: 100vh;
+}
+
+.profile-image {
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  border: 2px dotted #3d3d3d;
+}
+
+.works {
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
+}
+
+footer {
+  background-color: rgba(250, 235, 215, 0.7);
+  height: 30px;
+}
+
+footer .copy-right {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+}
+/*# sourceMappingURL=styles.css.map */
