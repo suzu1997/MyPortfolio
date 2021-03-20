@@ -18,8 +18,7 @@
       <!-- 左上にロゴ  -->
       <div class="header-logo">logo</div>
       <!-- 右上ナビゲーションメニュー -->
-      
-    
+
       <!-- スマートフォン ハンバーガーメニュー-->
       <!-- <div class='mobile-icon'>
 
@@ -35,44 +34,98 @@
 
       <!-- PCサイズ -->
       <nav>
-        <ul class='navigation-menu'>
+        <ul class="navigation-menu">
           <li><a href="#">TOP</a></li>
           <li><a href="#profile">PROFILE</a></li>
           <li><a href="#works">WORKS</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
       </nav>
-
     </header>
     <main>
-      <div class="wrapper">
-        <div class="top">
-          <h1>Thank you for visiting my portfolio</h1>
-          <div class="hero_footer">
-            <img class="hero_downarrow" src="./images/arrow.svg">
-            <span class="hero_scrolltext">scroll</span>
-          </div>
+      <div class="top">
+        <h1>Thank you for visiting my portfolio</h1>
+        <div class="hero_footer">
+          <img class="hero_downarrow" src="./images/arrow.svg" />
+          <span class="hero_scrolltext">scroll</span>
         </div>
-        <section id='profile' class="profile">
-          <p class='title'>profile</p>
-          <div>
-            <img class='profile-image' src="./images/MyPhoto.jpg" alt="プロフィール写真">
-            <div class='profile-text'>
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。 ここに自己紹介文を書く。
+      </div>
+      <div class="wrapper">
+        <section id="profile" class="profile">
+          <p class="title">profile</p>
+          <div class="profile-content">
+            <div class="img-name">
+              <img
+                class="profile-image"
+                src="./images/MyPhoto.png"
+                alt="プロフィール写真"
+              />
+              <div class="my-name">
+                <div class="japanese">鈴原 千絵</div>
+                <div class="alphabet">Suzuhara Chie</div>
+              </div>
+            </div>
+            <div class="profile-text">
+              ここに自己紹介文を書く。 ここに自己紹介文を書く。
+              ここに自己紹介文を書く。 ここに自己紹介文を書く。
+              ここに自己紹介文を書く。 ここに自己紹介文を書く。
+              ここに自己紹介文を書く。 ここに自己紹介文を書く。
+              ここに自己紹介文を書く。 ここに自己紹介文を書く。
+              ここに自己紹介文を書く。
             </div>
           </div>
         </section>
 
-        <section id='works' class="works">
-          <p class='title'>works</p>
+        <section id="works" class="works">
+          <p class="title">works</p>
+          <div class="works-content">
+            <div class="work-item">
+              <img class="work-img" src="./images/malta.jpg" alt="" />
+              <div class="work-name">あああああ</div>
+            </div>
+            <div class="work-item">
+              <img class="work-img" src="./images/malta2.jpg" alt="" />
+              <div class="work-name">いいいいい</div>
+            </div>
+            <div class="work-item">
+              <img class="work-img" src="./images/malta3.JPG" alt="" />
+              <div class="work-name">ううううう</div>
+            </div>
+            <div class="work-item">
+              <img class="work-img" src="./images/malta4.JPG" alt="" />
+              <div class="work-name">えええええ</div>
+            </div>
+          </div>
         </section>
-        <section id='contact' class="contact">
-          <p class='title'>contact</p>
+        <section id="contact" class="contact">
+          <p class="title">contact</p>
+          <form>
+            <div class="msr_text_05">
+              <label>お名前</label>
+              <input type="text" />
+            </div>
+            <div class="msr_text_05">
+              <label>メールアドレス</label>
+              <input type="text" />
+            </div>
+            <div class="msr_textarea_05">
+              <label>お問い合わせ内容</label>
+              <textarea></textarea>
+            </div>
+            <p class="msr_sendbtn_05">
+              <input type="submit" value="Send">
+            </p>
+            <p class="msr_sendbtn_05">
+              <input type="submit" value="Send" disabled="disabled">
+            </p>
+          </form>
+          
+          
         </section>
       </div>
     </main>
     <footer class="footer">
-      <p><small class='copy-right'>&copy;Chie Suzuhara 2021</small></p>
+      <p><small class="copy-right">&copy;Chie Suzuhara 2021</small></p>
     </footer>
   </body>
 </html>

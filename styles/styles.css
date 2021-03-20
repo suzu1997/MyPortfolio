@@ -75,6 +75,8 @@ img {
 .wrapper {
   margin: 0 auto;
   /*中央に配置する指定*/
+  padding: 0 5%;
+  /*スマートフォン向けの余白の設定*/
   max-width: 1110px;
 }
 
@@ -131,25 +133,166 @@ img {
 }
 
 .profile {
-  height: 100vh;
-  padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
-.profile-image {
-  width: 200px;
-  height: 250px;
+.profile .img-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile .profile-image {
+  width: 180px;
+  height: 220px;
   border-radius: 10px;
   border: 2px dotted #3d3d3d;
+  margin-top: 50px;
+}
+
+.profile .japanese {
+  border-bottom: 2px dotted #3d3d3d;
+  font-size: 22px;
+}
+
+.profile .alphabet {
+  font-size: 16px;
+}
+
+.profile .profile-text {
+  margin-top: 60px;
 }
 
 .works {
-  height: 100vh;
-  padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+.works > .title {
+  margin-bottom: 20px;
+}
+
+.work-item {
+  position: relative;
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.work-item .work-img {
+  margin-bottom: 15px;
+  -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.work-item .work-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #fff;
 }
 
 .contact {
-  height: 100vh;
-  padding-top: 50px;
+  min-height: 100vh;
+  padding-top: 60px;
+}
+
+/*--------------------------------------
+テキスト
+---------------------------------------*/
+.msr_text_05 {
+  padding-bottom: 20px;
+  width: 460px;
+  margin: 0 auto;
+}
+
+.msr_text_05 label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.msr_text_05 input[type=text] {
+  background: #fff;
+  border: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+  padding: 10px;
+  height: 40px;
+  width: 460px;
+}
+
+/*--------------------------------------
+テキストエリア
+---------------------------------------*/
+.msr_textarea_05 {
+  padding-bottom: 10px;
+  width: 460px;
+  margin: 0 auto;
+}
+
+.msr_textarea_05 label {
+  display: block;
+  font-size: 14px;
+  padding-bottom: 5px;
+}
+
+.msr_textarea_05 textarea {
+  border: 1px solid #999999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  padding: 10px;
+  height: 210px;
+  width: 460px;
+}
+
+/*--------------------------------------
+送信ボタン
+---------------------------------------*/
+.msr_sendbtn_05 {
+  margin: 0 0 10px;
+}
+
+.msr_sendbtn_05 input[type=submit] {
+  background-color: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+  padding: 14px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.msr_sendbtn_05 input[type=submit]:hover {
+  background-color: #999999;
+  color: #FFFFFF;
+}
+
+.msr_sendbtn_05 input[disabled=disabled] {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.msr_sendbtn_05 input[disabled=disabled]:hover {
+  background-color: #FFFFFF;
+  color: #333333;
 }
 
 footer {
@@ -161,5 +304,32 @@ footer .copy-right {
   display: block;
   text-align: center;
   line-height: 30px;
+}
+
+@media (min-width: 600px) {
+  .works-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .works-content .work-item {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin-bottom: 20px;
+  }
+  .works-content .work-item .work-img {
+    height: 230px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
