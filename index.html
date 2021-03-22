@@ -9,28 +9,25 @@
       name="description"
       content="私鈴原千絵のポートフォリオサイトです。フロントエンドエンジニアを目指して、独学でプログラミングを勉強中です。"
     />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!--ress.css(CSSのリセット)の読み込み-->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
+    <div id="cover"></div> 
     <header class="header">
       <!-- 左上にロゴ  -->
       <div class="header-logo">logo</div>
       <!-- 右上ナビゲーションメニュー -->
 
       <!-- スマートフォン ハンバーガーメニュー-->
-      <!-- <div class='mobile-icon'>
-
+      <div class='mobile-icon'>
+        <span class="material-icons" id='menu-button'> menu </span>
       <div>
-      <div class='mobile-menu'> 
-        <ul>
-          <li><a href="#">TOP</a></li>
-          <li><a href="#profile">PROFILE</a></li>
-          <li><a href="#works">WORKS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-        </ul>
-      </div> -->
 
       <!-- PCサイズ -->
       <nav>
@@ -42,6 +39,18 @@
         </ul>
       </nav>
     </header>
+    
+    <div class='mobile-menu'>
+      <span class="material-icons " id='close-button'> close </span>
+      <ul>
+        <li><a href="#">TOP</a></li>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#works">WORKS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div> 
+    <div id="menu-background"></div>
+
     <main>
       <div class="top">
         <h1>Thank you for visiting my portfolio</h1>
@@ -102,15 +111,15 @@
           <form>
             <div class="msr_text_05">
               <label>お名前</label>
-              <input type="text" />
+              <input type="text" placeholder="お名前を入力してください"/>
             </div>
             <div class="msr_text_05">
               <label>メールアドレス</label>
-              <input type="text" />
+              <input type="text" placeholder="メールアドレスを入力してください"/>
             </div>
             <div class="msr_textarea_05">
               <label>お問い合わせ内容</label>
-              <textarea></textarea>
+              <textarea placeholder="お問い合わせ内容を入力してください"></textarea>
             </div>
             <p class="msr_sendbtn_05">
               <input type="submit" value="Send">
@@ -127,5 +136,7 @@
     <footer class="footer">
       <p><small class="copy-right">&copy;Chie Suzuhara 2021</small></p>
     </footer>
+
+    <script src='main.js'></script>
   </body>
 </html>

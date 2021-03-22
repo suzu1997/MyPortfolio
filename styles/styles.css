@@ -8,6 +8,8 @@ body {
   font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', 'ヒラギノ角ゴ Pro W3', sans-serif;
   line-height: 1.7;
   /*行の高さ(行間)の指定*/
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -37,17 +39,89 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 10px;
   position: fixed;
   top: 0;
   width: 100%;
   height: 50px;
-  z-index: 100;
+  z-index: 10;
+}
+
+#cover {
+  background: #000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  display: none;
+  cursor: pointer;
+}
+
+#cover.open {
+  display: block;
+}
+
+.mobile-icon > .material-icons {
+  font-size: 42px;
+  line-height: 50px;
+  color: olive;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -230px;
+  z-index: 200;
+  background-color: #a0a061;
+  width: 230px;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+
+.mobile-menu.open {
+  -webkit-transform: translateX(-230px);
+          transform: translateX(-230px);
+}
+
+.mobile-menu.open > .material-icons {
+  font-size: 50px;
+  line-height: 50px;
+  color: #3d3d3d;
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+}
+
+.mobile-menu ul {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.mobile-menu ul li {
+  list-style: none;
+}
+
+.mobile-menu ul li > a {
+  color: antiquewhite;
+  display: block;
+  padding: 15px 0;
+  border-top: 2px dotted antiquewhite;
+}
+
+.mobile-menu ul li:nth-of-type(4) {
+  border-bottom: 2px dotted antiquewhite;
 }
 
 .navigation-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 .navigation-menu > li {
@@ -220,7 +294,7 @@ img {
   padding-bottom: 5px;
 }
 
-.msr_text_05 input[type=text] {
+.msr_text_05 input[type='text'] {
   background: #fff;
   border: 1px solid #999999;
   -webkit-box-sizing: border-box;
@@ -263,8 +337,8 @@ img {
   margin: 0 0 10px;
 }
 
-.msr_sendbtn_05 input[type=submit] {
-  background-color: #FFFFFF;
+.msr_sendbtn_05 input[type='submit'] {
+  background-color: #ffffff;
   border: 1px solid #999999;
   border-radius: 2px;
   color: #333333;
@@ -280,18 +354,18 @@ img {
   margin: 0 auto;
 }
 
-.msr_sendbtn_05 input[type=submit]:hover {
+.msr_sendbtn_05 input[type='submit']:hover {
   background-color: #999999;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.msr_sendbtn_05 input[disabled=disabled] {
+.msr_sendbtn_05 input[disabled='disabled'] {
   cursor: default;
   opacity: 0.5;
 }
 
-.msr_sendbtn_05 input[disabled=disabled]:hover {
-  background-color: #FFFFFF;
+.msr_sendbtn_05 input[disabled='disabled']:hover {
+  background-color: #ffffff;
   color: #333333;
 }
 
@@ -307,6 +381,14 @@ footer .copy-right {
 }
 
 @media (min-width: 600px) {
+  .mobile-icon > .material-icons {
+    display: none;
+  }
+  .navigation-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .works-content {
     display: -webkit-box;
     display: -ms-flexbox;

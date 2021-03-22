@@ -12,6 +12,8 @@ body {
   font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
     'ヒラギノ角ゴ Pro W3', sans-serif;
   line-height: 1.7; /*行の高さ(行間)の指定*/
+  position: relative;
+  z-index: 1;
 }
 
 a {
@@ -35,14 +37,85 @@ img {
   background-color: $cBackground;
   display: flex;
   justify-content: space-between;
+  padding-right: 10px;
   position: fixed;
   top: 0;
   width: 100%;
   height: 50px;
-  z-index: 100;
+  z-index: 10;
 }
+
+// ハンバーガーメニュー----------------
+#cover {
+  background: #000;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  display: none;
+  cursor: pointer;
+
+  &.open {
+    display: block;
+  }
+}
+
+.mobile-icon {
+  & > .material-icons {
+    font-size: 42px;
+    line-height: 50px;
+    color: olive;
+    cursor: pointer;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -230px;
+  z-index: 200;
+  background-color: rgb(160, 160, 97);
+  width: 230px;
+  height: 100%;
+  transition: transform 0.4s;
+
+  &.open {
+    transform: translateX(-230px);
+
+    & > .material-icons {
+      font-size: 50px;
+      line-height: 50px;
+      color: $cTitle;
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      cursor: pointer;
+    }
+  }
+  & ul {
+    text-align: center;
+    margin-top: 50px;
+    & li {
+      list-style: none;
+
+      & > a {
+        color: rgb(250, 235, 215);
+        display: block;
+        padding: 15px 0;
+        border-top: 2px dotted rgb(250, 235, 215);
+      }
+      &:nth-of-type(4) {
+        border-bottom: 2px dotted rgb(250, 235, 215);
+      }
+    }
+  }
+}
+
+// -------------------------------------
 .navigation-menu {
-  display: flex;
+  display: none;
 
   & > li {
     list-style: none;
@@ -177,7 +250,6 @@ img {
   }
 }
 
-
 // contact部分
 .contact {
   min-height: 100vh;
@@ -187,7 +259,6 @@ img {
 /*--------------------------------------
 テキスト
 ---------------------------------------*/
-
 .msr_text_05 {
   padding-bottom: 20px;
   width: 460px;
@@ -198,7 +269,7 @@ img {
   font-size: 14px;
   padding-bottom: 5px;
 }
-.msr_text_05 input[type=text] {
+.msr_text_05 input[type='text'] {
   background: #fff;
   border: 1px solid #999999;
   box-sizing: border-box;
@@ -210,7 +281,6 @@ img {
 /*--------------------------------------
 テキストエリア
 ---------------------------------------*/
-
 .msr_textarea_05 {
   padding-bottom: 10px;
   width: 460px;
@@ -233,16 +303,16 @@ img {
 /*--------------------------------------
 送信ボタン
 ---------------------------------------*/
-.msr_sendbtn_05{
-  margin:0 0 10px;
+.msr_sendbtn_05 {
+  margin: 0 0 10px;
 }
 
-.msr_sendbtn_05 input[type=submit] {
-  background-color: #FFFFFF;
-  border:1px solid #999999;
+.msr_sendbtn_05 input[type='submit'] {
+  background-color: #ffffff;
+  border: 1px solid #999999;
   border-radius: 2px;
   color: #333333;
-  cursor:pointer;
+  cursor: pointer;
   display: block;
   font-size: 14px;
   padding: 14px;
@@ -252,16 +322,16 @@ img {
   width: 180px;
   margin: 0 auto;
 }
-.msr_sendbtn_05 input[type=submit]:hover {
+.msr_sendbtn_05 input[type='submit']:hover {
   background-color: #999999;
-  color: #FFFFFF;
+  color: #ffffff;
 }
-.msr_sendbtn_05 input[disabled=disabled] {
-  cursor:default;
+.msr_sendbtn_05 input[disabled='disabled'] {
+  cursor: default;
   opacity: 0.5;
 }
-.msr_sendbtn_05 input[disabled=disabled]:hover {
-  background-color: #FFFFFF;
+.msr_sendbtn_05 input[disabled='disabled']:hover {
+  background-color: #ffffff;
   color: #333333;
 }
 
@@ -279,7 +349,18 @@ footer {
 
 // --------------------------------
 // メディアクエリ----------------//
+
+// タブレット・PCサイズ
 @media (min-width: 600px) {
+  .mobile-icon {
+    & > .material-icons {
+      display: none;
+    }
+  }
+  .navigation-menu {
+    display: flex;
+  }
+
   .works-content {
     display: flex;
     flex-direction: row;
