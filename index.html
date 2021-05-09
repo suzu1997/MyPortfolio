@@ -16,12 +16,20 @@
     <!--ress.css(CSSのリセット)の読み込み-->
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- -------ヘッダー------- -->
     <div id="cover"></div> 
     <header class="header">
       <!-- 左上にロゴ  -->
-      <div class="header-logo">logo</div>
+      <div class="header-logo">
+        <a href="#top">
+          <img src="./images/portfolio_logo.svg" alt="HPロゴ">
+        </a>
+      </div>
       <!-- 右上ナビゲーションメニュー -->
 
       <!-- スマートフォン ハンバーガーメニュー-->
@@ -32,7 +40,7 @@
       <!-- PCサイズ -->
       <nav>
         <ul class="navigation-menu">
-          <li><a href="#">TOP</a></li>
+          <li><a href="#top">TOP</a></li>
           <li><a href="#profile">PROFILE</a></li>
           <li><a href="#works">WORKS</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -43,17 +51,17 @@
     <div class='mobile-menu'>
       <span class="material-icons " id='close-button'> close </span>
       <ul>
-        <li><a href="#">TOP</a></li>
-        <li><a href="#profile">PROFILE</a></li>
-        <li><a href="#works">WORKS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a class="menu" href="#top">TOP</a></li>
+        <li><a class="menu" href="#profile">PROFILE</a></li>
+        <li><a class="menu" href="#works">WORKS</a></li>
+        <li><a class="menu" href="#contact">CONTACT</a></li>
       </ul>
     </div> 
     <div id="menu-background"></div>
 
-    <main>
+    <main id="top">
       <div class="top">
-        <h1>Thank you for visiting my portfolio</h1>
+        <h1>Thank you for visiting my portfolio.</h1>
         <div class="hero_footer">
           <img class="hero_downarrow" src="./images/arrow.svg" />
           <span class="hero_scrolltext">scroll</span>
@@ -72,7 +80,7 @@
               <div class="my-name">
                 <div class="japanese">鈴原 千絵</div>
                 <div class="alphabet">Suzuhara Chie</div>
-              </div>
+              </div>  
             </div>
             <div class="profile-text">
               ここに自己紹介文を書く。 ここに自己紹介文を書く。
@@ -89,20 +97,28 @@
           <p class="title">works</p>
           <div class="works-content">
             <div class="work-item">
-              <img class="work-img" src="./images/malta.jpg" alt="" />
-              <div class="work-name">あああああ</div>
+              <a href="#">
+                <img class="work-img" src="./images/malta.jpg" alt="" />
+                <div class="work-name">あああああ</div>
+              </a>
             </div>
             <div class="work-item">
-              <img class="work-img" src="./images/malta2.jpg" alt="" />
-              <div class="work-name">いいいいい</div>
+              <a href="#">
+                <img class="work-img" src="./images/malta2.jpg" alt="" />
+                <div class="work-name">いいいいい</div>
+              </a>
             </div>
             <div class="work-item">
-              <img class="work-img" src="./images/malta3.JPG" alt="" />
-              <div class="work-name">ううううう</div>
+              <a href="#">
+                <img class="work-img" src="./images/malta3.JPG" alt="" />
+                <div class="work-name">ううううう</div>
+              </a>
             </div>
             <div class="work-item">
-              <img class="work-img" src="./images/malta4.JPG" alt="" />
-              <div class="work-name">えええええ</div>
+              <a href="#">
+                <img class="work-img" src="./images/malta4.JPG" alt="" />
+                <div class="work-name">えええええ</div>
+              </a>
             </div>
           </div>
         </section>
@@ -110,15 +126,15 @@
           <p class="title">contact</p>
           <form>
             <div class="msr_text_05">
-              <label>お名前</label>
+              <label>Name</label>
               <input type="text" placeholder="お名前を入力してください"/>
             </div>
             <div class="msr_text_05">
-              <label>メールアドレス</label>
+              <label>Email</label>
               <input type="text" placeholder="メールアドレスを入力してください"/>
             </div>
             <div class="msr_textarea_05">
-              <label>お問い合わせ内容</label>
+              <label>Content</label>
               <textarea placeholder="お問い合わせ内容を入力してください"></textarea>
             </div>
             <p class="msr_sendbtn_05">
