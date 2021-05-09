@@ -9,16 +9,16 @@
       name="description"
       content="私鈴原千絵のポートフォリオサイトです。フロントエンドエンジニアを目指して、独学でプログラミングを勉強中です。"
     />
+    <!--ress.css(CSSのリセット)の読み込み-->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!--ress.css(CSSのリセット)の読み込み-->
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="icon" type="image/png" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   </head>
   <body>
     <!-- -------ヘッダー------- -->
@@ -83,12 +83,11 @@
               </div>  
             </div>
             <div class="profile-text">
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。
-              ここに自己紹介文を書く。 ここに自己紹介文を書く。
-              ここに自己紹介文を書く。
+              2019年3月に神戸大学を卒業し、新卒では東京の旅行会社に入社しました。<br />
+              フロントエンドエンジニアへの転職を目指して、昨年の12月からプログラミングの勉強を始めました。
+              現在は主に、JavaScriptのフレームワーク／ライブラリであるReact・Next.jsを勉強しています。<br />
+              好奇心旺盛で、新しい世界を見ること、新しいことを知ることが好きです。
+              この性格を生かして、今後も敏感に新しい技術や情報をキャッチし、自分のスキルや知識を伸ばし続けていきたいと思っています。
             </div>
           </div>
         </section>
@@ -110,8 +109,8 @@
             </div>
             <div class="work-item">
               <a href="#">
-                <img class="work-img" src="./images/malta3.JPG" alt="" />
-                <div class="work-name">ううううう</div>
+                <img class="work-img" src="./images/movie-notes-app.png" alt="" />
+                <div class="work-name">映画検索&記録アプリ</div>
               </a>
             </div>
             <div class="work-item">
@@ -124,28 +123,36 @@
         </section>
         <section id="contact" class="contact">
           <p class="title">contact</p>
-          <form>
-            <div class="msr_text_05">
-              <label>Name</label>
-              <input type="text" placeholder="お名前を入力してください"/>
-            </div>
-            <div class="msr_text_05">
-              <label>Email</label>
-              <input type="text" placeholder="メールアドレスを入力してください"/>
-            </div>
-            <div class="msr_textarea_05">
-              <label>Content</label>
-              <textarea placeholder="お問い合わせ内容を入力してください"></textarea>
-            </div>
-            <p class="msr_sendbtn_05">
-              <input type="submit" value="Send">
-            </p>
-            <p class="msr_sendbtn_05">
-              <input type="submit" value="Send" disabled="disabled">
-            </p>
-          </form>
+          <div id="thxMessage" style="display:none;"><p>お問い合わせいただきありがとうございます。確認次第ご返信させていただきます。</p></div>
+          <!-- お問い合わせフォーム -->
+          <div>
+            <form id="form" name="myForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfk-xacQeSRXo_3KH8XYVCYtMtJvdztCrkEmvUujqkMuMaQ7Q/formResponse" method="POST" target="dummyIframe">
+              <div class="msr_text_05">
+                <label>Name</label>
+                <input type="text" name="entry.2005620554" placeholder="お名前を入力してください" value="" required/>
+              </div>
+              <div class="msr_text_05">
+                <label>Email</label>
+                <input type="text" name="entry.1045781291" pattern="[\w\d_-]+@[\w\d_-]+\.[\w\d._-]+" placeholder="メールアドレスを入力してください" required/>
+                <p id="email-error">メールアドレスを正しく入力してください</p>
+              </div>
+              <div class="msr_textarea_05">
+                <label>Content</label>
+                <textarea name="entry.839337160" placeholder="メッセージ内容を入力してください" required></textarea>
+              </div>
+              <p class="msr_sendbtn_05">
+                <input 
+                id="send-button" type="button" value="Send" disabled="disabled" >
+              </p>
+            </form>
+            <iframe name="dummyIframe" style="display:none;"></iframe>
+          </div>
           
-          
+          <div class="sns-link">
+            <a href="https://github.com/suzu1997" target="_blank">
+              <img src="images/github_icon_72.png" alt="githubのアイコン">
+            </a>
+          </div>
         </section>
       </div>
     </main>
