@@ -1,4 +1,3 @@
-
 'use strict';
 
 {
@@ -55,5 +54,46 @@
     e.addEventListener('click', () => {
       closeButton.click();
     });
+  });
+
+  //コンタクトフォーム
+  const form = document.getElementById('form');
+  const email = form['entry.1045781291'];
+  const sendButton = document.getElementById('send-button');
+  const emailError = document.getElementById('email-error');
+
+  // emailの形式が違う場合にエラー文を表示
+  const emailUpdate = (e) => {
+    const validity = e.target.validity;
+
+    if (validity.patternMismatch) {
+      emailError.style.display = 'block';
+      return;
+    }
+    emailError.style.display = 'none';
+  };
+  // submitボタンの活性/非活性
+  const update = () => {
+    const isValid = form.checkValidity();
+    if (isValid) {
+      // 通っていれば活性化
+      sendButton.removeAttribute('disabled');
+      return;
+    }
+    // 通っていなければ非活性にする
+    sendButton.setAttribute('disabled', 'disabled');
+  };
+
+  email.addEventListener('input', emailUpdate);
+  form.addEventListener('input', update);
+
+  //フォームの送信ボタンをクリックした時の挙動
+  const submitForm = () => {
+    document.myForm.submit();
+    document.getElementById('thxMessage').style.display = 'block';
+    document.myForm.reset();
+  };
+  sendButton.addEventListener('click', () => {
+    submitForm();
   });
 }
