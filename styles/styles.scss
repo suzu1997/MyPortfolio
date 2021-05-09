@@ -9,8 +9,7 @@ html {
 
 body {
   /* 書体の指定 */
-  font-family: 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体',
-    'ヒラギノ角ゴ Pro W3', sans-serif;
+  font-family: 'Merriweather', serif, 'Yu Gothic Medium', '游ゴシック Medium', YuGothic, '游ゴシック体', sans-serif;
   line-height: 1.7; /*行の高さ(行間)の指定*/
   position: relative;
   z-index: 1;
@@ -24,7 +23,7 @@ img {
   max-width: 100%; /*画像が親要素よりも大きくなることを防ぐ*/
   height: auto; /*アスペクト比を維持したまま画像サイズを変更*/
 }
-
+// 各項目のタイトル
 .title {
   color: $cTitle;
   display: block;
@@ -43,9 +42,13 @@ img {
   width: 100%;
   height: 50px;
   z-index: 10;
+
+  & img {
+    margin-left: 8px;
+  }
 }
 
-// ハンバーガーメニュー----------------
+// ハンバーガーメニュー-------
 #cover {
   background: #000;
   opacity: 0.7;
@@ -105,6 +108,11 @@ img {
         display: block;
         padding: 15px 0;
         border-top: 2px dotted rgb(250, 235, 215);
+        transition: color 0.3s;
+
+        &:hover {
+          color: #3d3d3d;
+        }
       }
       &:nth-of-type(4) {
         border-bottom: 2px dotted rgb(250, 235, 215);
@@ -112,8 +120,8 @@ img {
     }
   }
 }
-
-// -------------------------------------
+//---------------------------------
+// PC ナビゲーションメニュー
 .navigation-menu {
   display: none;
 
@@ -129,7 +137,6 @@ img {
       padding: 0 16px;
     }
     &:hover {
-      background-color: rgba(255, 255, 255, 0.3);
       outline: 2px dotted $cTitle;
 
       & > a {
@@ -138,11 +145,15 @@ img {
     }
   }
 }
+#top {
+  padding-top: 50px;
+}
+
 // メイン
 .wrapper {
   margin: 0 auto; /*中央に配置する指定*/
-  padding: 0 5%; /*スマートフォン向けの余白の設定*/
-  max-width: 1110px;
+  padding: 0 6%; /*スマートフォン向けの余白の設定*/
+  max-width: 1000px;
 }
 
 //  Topの部分
@@ -153,7 +164,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 50px;
 
   & h1 {
     color: $cTitle;
@@ -162,8 +172,12 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 26px;
+    padding: 10px;
+    width: 70%;
   }
 }
+//Scrollナビゲーション
 .hero_footer {
   position: absolute;
   left: 50%;
@@ -195,11 +209,11 @@ img {
 //  profile部分
 .profile {
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 100px;
 
   & .img-name {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   & .profile-image {
@@ -208,6 +222,7 @@ img {
     border-radius: 10px;
     border: 2px dotted $cTitle;
     margin-top: 50px;
+    margin-right: 45px;
   }
   & .japanese {
     border-bottom: 2px dotted $cTitle;
@@ -217,7 +232,10 @@ img {
     font-size: 16px;
   }
   & .profile-text {
-    margin-top: 60px;
+    margin: 0 auto;
+    margin-top: 62px;
+    max-width: 80%;
+    font-family: serif;
   }
 }
 
@@ -227,7 +245,7 @@ img {
   padding-top: 60px;
 
   & > .title {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
   }
 }
 
@@ -238,8 +256,17 @@ img {
   margin: 0 auto;
 
   & .work-img {
-    margin-bottom: 15px;
+    margin: 0 auto;
+    width: 320px;
+    height: 230px;
+    display: block;
+    margin-bottom: 45px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
   & .work-name {
     position: absolute;
@@ -254,14 +281,21 @@ img {
 .contact {
   min-height: 100vh;
   padding-top: 60px;
+  width: 90%;
+  max-width: 560px;
+  margin: 0 auto;
+
+  & > form {
+    margin-top: 30px;
+  }
 }
 
 /*--------------------------------------
-テキスト
+テキストフォーム
 ---------------------------------------*/
 .msr_text_05 {
   padding-bottom: 20px;
-  width: 460px;
+  width: 100%;
   margin: 0 auto;
 }
 .msr_text_05 label {
@@ -276,14 +310,14 @@ img {
   font-size: 14px;
   padding: 10px;
   height: 40px;
-  width: 460px;
+  width: 100%;
 }
 /*--------------------------------------
 テキストエリア
 ---------------------------------------*/
 .msr_textarea_05 {
   padding-bottom: 10px;
-  width: 460px;
+  width: 100%;
   margin: 0 auto;
 }
 .msr_textarea_05 label {
@@ -297,7 +331,7 @@ img {
   font-size: 13px;
   padding: 10px;
   height: 210px;
-  width: 460px;
+  width: 100%;
 }
 
 /*--------------------------------------
@@ -338,12 +372,12 @@ img {
 // フッター
 footer {
   background-color: $cBackground;
-  height: 30px;
+  height: 40px;
 
   & .copy-right {
     display: block;
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
   }
 }
 
@@ -351,7 +385,11 @@ footer {
 // メディアクエリ----------------//
 
 // タブレット・PCサイズ
-@media (min-width: 600px) {
+@media (min-width: 640px) {
+  .title {
+    font-size: 38px;
+  }
+
   .mobile-icon {
     & > .material-icons {
       display: none;
@@ -360,21 +398,53 @@ footer {
   .navigation-menu {
     display: flex;
   }
+  // トップ部分
+  .top {
+    & h1 {
+      transform: translate(-50%, -50%);
+      font-size: 32px;
+      padding: 30px 18px;
+      width: auto;
+    }
+  }
+  // プロフィール部分
+  .profile {
+    & .profile-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
+      & .img-name {
+        flex-direction: column;
+        margin-right: 55px;
+      }
+      & .profile-image {
+        width: 220px;
+        height: 260px;
+        margin: 70px auto 50px auto;
+      }
+      & .japanese {
+        font-size: 26px;
+      }
+      & .alphabet {
+        font-size: 20px;
+      }
+      & .profile-text {
+        margin: 0;
+        max-width: 52%;
+      }
+    }
+  }
+  // Work部分
   .works-content {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: space-around;
     flex-wrap: wrap;
 
     & .work-item {
-      flex-basis: 45%;
-      margin-bottom: 20px;
-
-      & .work-img {
-        height: 230px;
-      }
+      flex-basis: 40%;
+      margin-bottom: 12px;
     }
   }
 }
