@@ -181,7 +181,7 @@ img {
   color: #3d3d3d;
   background-color: rgba(250, 235, 215, 0.7);
   position: absolute;
-  top: 50%;
+  top: 37%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -190,10 +190,10 @@ img {
   width: 70%;
 }
 
-.hero_footer {
+.top_footer {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 100px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   z-index: 2;
@@ -204,7 +204,7 @@ img {
   background-color: rgba(250, 235, 215, 0.7);
 }
 
-.hero_downarrow {
+.top_downarrow {
   position: absolute;
   left: 50%;
   bottom: 8%;
@@ -212,7 +212,7 @@ img {
   height: 50px;
 }
 
-.hero_scrolltext {
+.top_scrolltext {
   position: absolute;
   color: olive;
   left: 50%;
@@ -325,8 +325,8 @@ img {
 
 .work-item .work-github {
   color: #000;
-  -webkit-text-decoration: underline #000 1px;
-          text-decoration: underline #000 1px;
+  -webkit-text-decoration: underline solid #000;
+          text-decoration: underline solid #000;
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
@@ -490,11 +490,15 @@ footer .copy-right {
     display: flex;
   }
   .top h1 {
+    top: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     font-size: 32px;
     padding: 30px 18px;
     width: auto;
+  }
+  .top_footer {
+    bottom: 40px;
   }
   .profile {
     padding-top: 85px;
