@@ -131,6 +131,7 @@ img {
     line-height: 50px;
     outline: 2px dotted rgb(194, 194, 138);
     outline-offset: -0.3rem;
+    letter-spacing: 0.08rem;
 
     & > a {
       color: olive;
@@ -269,6 +270,7 @@ img {
     display: block;
     margin-bottom: 20px;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    border: solid 1px #000;
   }
   & .work-name {
     position: absolute;
