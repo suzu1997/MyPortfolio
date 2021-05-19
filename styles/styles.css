@@ -29,6 +29,9 @@ img {
   display: block;
   text-align: center;
   font-size: 32px;
+  -webkit-text-decoration: underline dotted olive;
+          text-decoration: underline dotted olive;
+  text-underline-offset: 0.5rem;
 }
 
 .header {
@@ -224,7 +227,7 @@ img {
 
 .profile {
   min-height: 100vh;
-  padding-top: 45px;
+  padding-top: 70px;
 }
 
 .profile .img-name {
@@ -259,19 +262,19 @@ img {
 
 .profile .profile-text {
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 45px;
   max-width: 88%;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-family: serif;
 }
 
 .works {
   min-height: 100vh;
-  padding-top: 60px;
+  padding-top: 50px;
 }
 
 .works > .title {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 
 .work-item {
@@ -344,7 +347,7 @@ img {
 }
 
 .contact > .title {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .sns-link {
@@ -501,7 +504,7 @@ footer .copy-right {
     bottom: 40px;
   }
   .profile {
-    padding-top: 85px;
+    padding-top: 100px;
   }
   .profile .profile-content {
     display: -webkit-box;
@@ -513,6 +516,7 @@ footer .copy-right {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: 80px;
   }
   .profile .profile-content .img-name {
     -webkit-box-orient: vertical;
@@ -524,7 +528,7 @@ footer .copy-right {
   .profile .profile-content .profile-image {
     width: 220px;
     height: 260px;
-    margin: 70px auto 50px auto;
+    margin: 0 0 50px 0;
   }
   .profile .profile-content .japanese {
     font-size: 26px;
