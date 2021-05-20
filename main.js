@@ -95,5 +95,6 @@
   };
   sendButton.addEventListener('click', () => {
     submitForm();
+    sendButton.setAttribute('disabled', 'disabled');
   });
 }
