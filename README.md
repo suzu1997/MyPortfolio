@@ -14,4 +14,5 @@
 
 - HTML
 - SCSS
+- JavaScript
 - ESLint
