@@ -35,12 +35,12 @@
     cover.classList.remove('open');
   };
 
-  const menuButton = document.getElementById('menu-button');
+  const menuButton = document.getElementById('menuButton');
   menuButton.addEventListener('click', () => {
     menuOpen();
   });
 
-  const closeButton = document.getElementById('close-button');
+  const closeButton = document.getElementById('closeButton');
   closeButton.addEventListener('click', () => {
     menuClose();
   });
@@ -56,11 +56,27 @@
     });
   });
 
+  //work ポートフォリオサイトのキャプチャを表示/非表示にするJavaScript
+  const screenCapture = document.querySelector('.screen-capture');
+  const captureCover = document.getElementById('captureCover');
+
+  document.getElementById('portfolioImg').addEventListener('click', () => {
+    captureCover.classList.add('display');
+    screenCapture.classList.add('display');
+  });
+
+  captureCover.addEventListener('click', () => {
+    captureCover.classList.remove('display');
+    screenCapture.classList.remove('display');
+  });
+
+  
+
   //コンタクトフォーム
   const form = document.getElementById('form');
   const email = form['entry.1045781291'];
-  const sendButton = document.getElementById('send-button');
-  const emailError = document.getElementById('email-error');
+  const sendButton = document.getElementById('sendButton');
+  const emailError = document.getElementById('emailError');
 
   // emailの形式が違う場合にエラー文を表示
   const emailUpdate = (e) => {
