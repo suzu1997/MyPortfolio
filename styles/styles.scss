@@ -54,7 +54,7 @@ img {
 // ハンバーガーメニュー-------
 #cover {
   background: #000;
-  opacity: 0.7;
+  opacity: 0;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -63,8 +63,10 @@ img {
   z-index: 60;
   display: none;
   cursor: pointer;
+  transition: opacity 0.4s;
 
   &.open {
+    opacity: 0.7;
     display: block;
   }
 }
@@ -117,7 +119,7 @@ img {
           color: #3d3d3d;
         }
       }
-      &:nth-of-type(4) {
+      &:nth-of-type(5) {
         border-bottom: 2px dotted rgb(250, 235, 215);
       }
     }
@@ -345,18 +347,41 @@ img {
     margin-bottom: 50px;
   }
 }
-.sns-link {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
 
-  & p {
-    color: #000;
-    text-decoration: underline solid #000;
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .github {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 20px;
+  
+    & p {
+      color: #000;
+      text-decoration: underline solid #000;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
+  
+  & .blog-link {
+    & p {
+      color: #000;
+      text-decoration: underline solid #000;
+      margin-top: 20px;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  } 
 }
+
+
 #thxMessage {
   color: blue;
   margin-bottom: 12px;
